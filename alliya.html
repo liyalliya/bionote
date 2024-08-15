@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Angkor&family=Archivo+Black&family=Black+Han+Sans&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Sankofa+Display&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cedarville+Cursive&family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Allison&family=Angkor&family=Archivo+Black&family=Black+Han+Sans&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Sankofa+Display&display=swap" rel="stylesheet">
+
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        color: rgb(238, 216, 187);
+      }
+
+      .section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: background-color 0.7s ease;
+      }
+
+      .section1 {
+        background-color: rgb(34, 33, 28);
+      }
+
+      .section2 {
+        background-color: rgb(158,72,47);
+      }
+
+      .section3 {
+        background-color: rgb(109, 97, 70);
+      }
+
+      a {
+        text-decoration: none;
+        color: rgba(243, 226, 198);
+      }
+
+      .nav-bar {
+        width: 100%;
+        height: 70px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(34, 33, 28, 0);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0px;
+        z-index: 1000;
+        transition: background-color 0.5s ease;
+      }
+
+      .nav-bar div {
+        display: flex;
+        margin: 0 15px;
+      }
+
+      .nav-bar .logo {
+        font-family: Pacifico, cursive;
+        font-size: 30px;
+        font-style: italic;
+        font-weight: 400;
+        margin-top: 20px;
+        margin-left: 1435px;
+        color: rgba(243, 226, 198);
+      }
+
+      .container {
+        width: 25px;
+        height: 100vh;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        transition: width 0.7s ease;
+        background-color: rgba(34, 33, 28, 0.158);
+        padding: 8px;
+        border: 1px solid #00000000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container:hover {
+        width: 70px;
+      }
+
+      .content {
+        height: 100%;
+        white-space: nowrap;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px;
+        margin-top: 300px;
+        transform: translateX(-100px);
+        transition: transform 0.7s ease;
+      }
+
+      .container:hover .image-container {
+        transform: translateX(0);
+      }
+
+      .image-container img {
+        margin-bottom: 20px;
+      }
+
+      .vertical-text {
+        display: flex;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-family: "Bona Nova SC", serif;
+        font-weight: 700;
+        font-style: normal;
+        transition: opacity 0.3s ease;
+        color: rgba(243, 226, 198);
+      }
+
+      .container:hover .vertical-text {
+        opacity: 0;
+      }
+
+      .text {
+        position: absolute;
+        z-index: 10;
+        font-size: 820%;
+        font-family: "Black Han Sans", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        left: 80px;
+      }
+
+      .alliya1 {
+        color: rgba(177, 87, 37);
+        margin-top: 175px;
+      }
+
+      .alliya2 {
+        color: rgb(228, 147, 60);
+        margin-top: 155px;
+      }
+
+      .alliya3 {
+        color: rgba(243, 226, 198);
+        margin-top: 135px;
+      }
+
+      .mypic1 {
+        position: absolute;
+        width: 19%;
+        height: 60%;
+        right: 100px;
+        top: 35px;
+      }
+
+      .mypic2 {
+        position: absolute;
+        width: 19%;
+        height: 60%;
+        right: 420px;
+        top: 200px;
+      }
+
+      .mypic3 {
+        position: absolute;
+        width: 19%;
+        height: 31.4%;
+        right: 100px;
+        top: 575px;
+      }
+
+      .mypic4 {
+        position: absolute;
+        width: 19%;
+        height: 30%;
+        margin-left: 1000px;
+        margin-top: 587px;
+      }
+
+      .rectangle {
+            position: absolute;
+            left: 80px;
+            top: 1430px;
+            width: 250px; 
+            height: 100px; 
+            background-color: #e4933c00; 
+            z-index: 1;
+      }
+
+      .main-display {
+  position: absolute;
+  top: 375px;
+  left: 275px;
+  transform: translate(-50%, -50%);
+  height: 160px;
+  overflow: hidden;
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 45px; /* Adjusted font size */
+  line-height: 50px; /* Adjusted line height to match font size */
+  color: rgb(228, 147, 60);
+}
+
+.text-wrapper {
+  font-weight: 600;
+  overflow: hidden;
+  height: 50px; /* Adjusted height to fit font size */
+  padding: 0 40px;
+  position: relative; /* Ensure positioning context for pseudo-elements */
+}
+
+.text-wrapper:before {
+  position: absolute;
+  left: 0;
+  font-size: 45px; /* Adjusted font size for the pseudo-element */
+  line-height: 50px; /* Adjusted line height to match font size */
+  animation: opacity 2s infinite;
+}
+
+.text-wrapper:after {
+  position: absolute;
+  left: 0;
+  font-size: 45px; /* Adjusted font size for the pseudo-element */
+  line-height: 50px; /* Adjusted line height to match font size */
+  animation: opacity 2s infinite;
+}
+
+.text-wrapper__text {
+  display: inline;
+  float: left;
+  margin: 0;
+  font-size: 45px; /* Adjusted font size */
+}
+
+.text-wrapper__list {
+  margin-top: 0;
+  padding-left: 110px;
+  text-align: left;
+  list-style: none;
+  animation: change 10s infinite;
+}
+
+.text-wrapper__list__item {
+  line-height: 50px; /* Adjusted line height to match font size */
+  margin: 0;
+  font-size: 45px; /* Adjusted font size */
+}
+
+    @keyframes opacity {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes change {
+      0%, 12.66%, 100% { transform: translate3d(0, 0, 0); }
+      16.66%, 29.32% { transform: translate3d(0, -25%, 0); }
+      33.32%, 45.98% { transform: translate3d(0, -50%, 0); }
+      49.98%, 62.64% { transform: translate3d(0, -75%, 0); }
+      66.64%, 79.3% { transform: translate3d(0, -50%, 0); }
+      83.3%, 95.96% { transform: translate3d(0, -25%, 0); }
+    }
+
+
+    </style>
+    <title>Alliya.</title>
+  </head>
+
+  <body>
+    <nav class="nav-bar">
+      <div class="logo">AV</div>
+    </nav>
+
+  <div class="main-display">
+    <div class="text-wrapper">
+      <p class="text-wrapper__text">
+        Hello
+      </p>
+      
+      <ul class="text-wrapper__list">
+        <li class="text-wrapper__list__item " >world!</li>
+        <li class="text-wrapper__list__item">warriors!</li>
+        <li class="text-wrapper__list__item">users!</li>
+        <li class="text-wrapper__list__item">everybody!</li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="section section1">
+      <p class="text alliya1">
+        <b>
+          I'm Alliya</b
+        >
+      </p>
+
+      <p class="text alliya2">
+        <b>
+          I'm Alliya</b
+        >
+      </p>
+
+      <p class="text alliya3">
+        <b>
+          
+          I'm 
+          Alliya</b
+        >
+      </p>
+
+      <img class="mypic1" src="dark-liya.jpg" alt="me" />
+      <img class="mypic2" src="colored-liya.jpg" alt="me" />
+      <img class="mypic3" src="orange-liya.jpg" alt="me" />
+      <div class="container">
+     
+        <div class="content">
+          <p
+            class="vertical-text"
+            style="
+              margin-left: 15px;
+              margin-top: 380px;
+              font-size: 100%;
+              font-family: Angkor, serif;
+              font-weight: 400;
+              font-style: normal;
+            "
+          >
+            <b> . . . </b>
+          </p>
+
+          <div class="image-container">
+            <a href="https://www.instagram.com/_liyalliya/">
+              <img src="ig.png" alt="ig logo" width="35" height="35" />
+            </a>
+
+            <a href="https://www.facebook.com/alleeyabernadette/">
+              <img src="fb.png" alt="fb logo" width="35" height="35" />
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@llybrndtt?is_from_webapp=1&sender_device=pc"
+            >
+              <img src="tt.png" alt="tt logo" width="35" height="35" />
+            </a>
+
+            <p
+              style="
+                margin-top: 220px;
+                margin-left: 0px;
+                text-align: center;
+                font-size: x-small;
+              "
+            >
+              © Alliya Virtucio <br />
+              2024
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section section2">
+      <img
+        style="
+          width: 55%;
+          height: 80%;
+          position: absolute;
+          right: 55px;
+          top: 950px;
+        "
+        src="liya.png"
+      />
+
+      <img style="width: 100%;
+      height: 100%;
+      position: absolute;
+      mix-blend-mode:normal;
+      opacity: 30%;
+      top: 839px; z-index: 0;" src="aura1.png" alt="bg design" />
+
+      <p 
+        style="
+            position: absolute; 
+            left: 80px; 
+            top: 975px;
+            font-size: 19px;
+            font-family: Moderustic, sans-serif;
+            font-weight: 250;
+            font-style: normal;
+            line-height: 1.8;"> 
+
+        <b>Alliya Bernadette Virtucio </b>is currently in her 3rd year of studying <b> Bachelor of Science in Computer <br>
+        Engineering at the University of the East - Manila</b> .In addition to her academic pursuits, she <br>
+        holds the esteemed position of <b>Vice President for Events and Programs at the Society of Computer <br>
+        Engineering Students</b>.Her role allows her to channel her leadership skills and passion for <br>
+        creating meaningful experiences for her peers. 
+        
+        <br><br>Beyond her academic and organizational responsibilities, Alliya is a person of many interests. <br>
+        She is an enthusiastic <b>cinephile, an avid reader, and a melophile</b>. Always curious and <br>adventurous, she 
+        is open to trying out new hobbies and activities in her spare time. Her <br> <b>commitment to both  her studies
+        and her varied passions</b> showcases her as a well-rounded <br> individual,  dedicated to personal  
+        development and the betterment of her community.
+      </p>
+
+      <div class="rectangle">
+      <p
+        style="
+          position: absolute;
+          top: 8px;
+          left: 0px;
+          text-align: left;
+          font-size: 85%;
+          font-family: Moderustic, sans-serif;
+          font-weight: 400;
+          font-style: italic;">
+        
+          alliya03virtuci@gmail.com <br />
+          +639566691234 <br />
+          Las Pinas City, Metro Manila
+      </p>
+
+     
+    </div>
+    </section>
+  </body>
+</html>
